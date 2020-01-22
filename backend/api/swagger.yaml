@@ -1,0 +1,160 @@
+---
+swagger: "2.0"
+info:
+  description: "Users API"
+  version: "1.0.0"
+  title: "Cloudappi Code Challenge"
+schemes:
+- "http"
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /users:
+    get:
+      description: "Get all users"
+      operationId: "listUsers"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/user"
+      x-swagger-router-controller: "UserController"
+    post:
+      operationId: "createUser"
+      parameters:
+      - in: "body"
+        name: "user"
+        required: true
+        schema:
+          $ref: "#/definitions/user"
+      responses:
+        "201":
+          description: "CREATED"
+          schema:
+            $ref: "#/definitions/user"
+        "405":
+          description: "Invalid input"
+      x-swagger-router-controller: "UserController"
+  /users/{userId}:
+    get:
+      description: "Get one user"
+      operationId: "getUser"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/user"
+        "400":
+          description: "Bad request"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "UserController"
+    put:
+      operationId: "updateUser"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      - in: "body"
+        name: "user"
+        required: true
+        schema:
+          $ref: "#/definitions/user"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/user"
+        "400":
+          description: "Bad request"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "UserController"
+    delete:
+      operationId: "deleteUser"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "OK"
+        "400":
+          description: "Bad request"
+        "404":
+          description: "User not found"
+      x-swagger-router-controller: "UserController"
+definitions:
+  user:
+    properties:
+      id:
+        type: "integer"
+        example: 1
+      firstname:
+        type: "string"
+        example: "John"
+      lastname:
+        type: "string"
+        example: "Smith"
+      email:
+        type: "string"
+        example: "john.smith@example.com"
+      birthDate:
+        type: "string"
+        format: "date"
+        example: "1980-01-23"
+      address:
+        $ref: "#/definitions/address"
+    example:
+      firstname: "John"
+      address:
+        country: "DE"
+        city: "Freiburg im Breisgau"
+        street: "Lindenstraße 89"
+        postalcode: "42030"
+        id: 1
+      id: 1
+      birthDate: "1980-01-23"
+      email: "john.smith@example.com"
+      lastname: "Smith"
+  address:
+    properties:
+      id:
+        type: "integer"
+        example: 1
+      street:
+        type: "string"
+        example: "Lindenstraße 89"
+      city:
+        type: "string"
+        example: "Freiburg im Breisgau"
+      country:
+        type: "string"
+        example: "DE"
+        enum:
+        - "ES"
+        - "UK"
+        - "DE"
+        - "US"
+      postalcode:
+        type: "string"
+        example: "42030"
+    example:
+      country: "DE"
+      city: "Freiburg im Breisgau"
+      street: "Lindenstraße 89"
+      postalcode: "42030"
+      id: 1

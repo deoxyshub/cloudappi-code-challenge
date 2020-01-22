@@ -1,0 +1,29 @@
+{
+  "name": "cloudappi-code-challenge",
+  "version": "1.0.0",
+  "description": "Users API",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js",
+    "debug": "node --inspect-brk index.js"
+  },
+  "keywords": [
+    "cloudappi",
+    "code-challenge",
+    "swagger",
+    "restful"
+  ],
+  "dependencies": {
+    "config": "^3.2.5",
+    "connect": "^3.2.0",
+    "cors": "^2.8.5",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "^0.10.4"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deoxyshub/cloudappi-code-challenge.git"
+  }
+}

@@ -1,0 +1,32 @@
+.cv-form.bx--form {
+  width: 35rem;
+}
+
+.bx--form-item {
+  margin-top: 1.2rem;
+}
+
+fieldset {
+  border-top: 1px solid #42b983;
+  margin: 1.2rem 0;
+}
+
+fieldset > legend {
+  padding-right: 1rem;
+  font-weight: 600;
+  color: #747779;
+}
+
+.hack-cv-select .bx--select-input__wrapper {
+  position: relative;
+}
+
+.hack-cv-select .bx--select-input__wrapper::after {
+  content: "Choose user" "s country";
+  position: absolute;
+  left: 15px;
+  right: 40px;
+  top: 10px;
+  bottom: 0;
+  color: darkgrey;
+}
