@@ -1,8 +1,18 @@
+### Installing dependencies
+To enable the portal, run:
+
+```
+npm install -g @vue/cli
+npm install
+npm run build
+
+
+```
 ### Running the server
 To run the portal, run:
 
 ```
-npm run serve --prod
+npm run serve
 http://localhost:8080/
 ```
 ```
