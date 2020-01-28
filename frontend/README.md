@@ -2,7 +2,7 @@
 
 <br />
 <p align="center" style="background: #42b983;">
-  <a href="http://vue.carbondesignsystem.com/"><img src="src/assets/CarbonVue2.svg" alt="@carbon/vue" style="height: 3.1241rem; width: 9.125rem;"/></a>
+  <a href="http://vue.carbondesignsystem.com/"><img src="src/assets/carbon-vue.svg" alt="@carbon/vue" style="height: 3.1241rem; width: 9.125rem;"/></a>
 </p>
 <h3 align="center">CloudAppi ::: Code Challenge</h3>
 <p align="center"><a href="https://3c878876.ngrok.io">Ver demo</a></p>
@@ -15,8 +15,6 @@ Una implementación FrontEnd simple, un BackEnd simulado. Tecnologías en cooper
 Pruebas, internacionalización, herramientas de código, versionaminento y muchas otros complementos.
 
 ### Construido con
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 - [Vue](https://vuejs.org/)
 - [Carbon Design System](https://www.carbondesignsystem.com/)
@@ -45,4 +43,4 @@ npm install
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jhmorales
-[product-screenshot]: frontend/src/assets/screenshot.png
+[product-screenshot]: src/assets/screenshot.png
