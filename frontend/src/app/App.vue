@@ -2,18 +2,37 @@
   <main id="app">
     <header>
       <nav>
-        <img src="../assets/CarbonVue2.svg" alt="@carbon/vue" />
-        <router-link to="/">Home</router-link>|
-        <router-link to="/about">About</router-link>
+        <a><img src="../assets/carbon-vue.svg" alt="@carbon/vue"/></a>
+        <router-link to="/">{{ $t("header.menu.home") }}</router-link
+        >|
+        <router-link to="/about">{{ $t("header.menu.about") }}</router-link>
       </nav>
+      <LocalizationComponent />
     </header>
-    <section><router-view /></section>
-    <footer></footer>
+    <section>
+      <router-view />
+    </section>
+    <footer role="contentinfo">
+      <small>
+        &copy; {{ $t("publish.owner.description") }} - &nbsp;
+        <time :datetime="$t('publish.date.shortname')" pubdate>{{ $t("publish.date.longname") }}</time>
+      </small>
+    </footer>
   </main>
 </template>
 
+<script>
+import LocalizationComponent from "./components/localization/localization.vue";
+
+export default {
+  components: {
+    LocalizationComponent
+  }
+};
+</script>
+
 <style>
-main {
+#app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,57 +41,71 @@ main {
   flex-flow: column nowrap;
 }
 
-main > header {
+#app > header {
   background: #42b983;
   height: 5rem;
   min-height: 5rem;
 }
 
-main > header > nav {
-  margin-left: 10rem;
-}
-
-main > header,
-main > header > nav {
+#app > header,
+#app > header > nav {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
 
-main > header > nav > img {
+#app > header > nav > a > img {
   height: 3.1241rem;
   width: 9.125rem;
 }
 
-main > header > nav > a {
+#app > header > nav > a {
   margin: 0 0.5rem;
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
 }
 
-main > header > nav > a:first-of-type {
+#app > header > nav > a:nth-of-type(2) {
   margin-left: 2rem;
 }
 
-main > header > nav > a.router-link-exact-active {
+#app > header > nav > a.router-link-exact-active {
   color: #ffffff;
 }
 
-main > section {
-  flex: 1 auto;
-  margin: 2rem 10rem;
+#app > section {
+  flex: auto;
+  margin: 2rem 0;
 }
 
-main > footer {
+#app > footer {
   height: 3rem;
   min-height: 3rem;
   background: #000000;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  color: #ffffff;
 }
 
-main > header,
-main > footer {
-  flex: 0 1 auto;
+#app > header,
+#app > section,
+#app > footer {
+  padding: 0 5rem;
 }
 
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  #app > section {
+    margin: 2rem 0.5rem;
+  }
+
+  #app > header,
+  #app > section,
+  #app > footer {
+    padding: 0 0.5rem;
+  }
+}
 </style>

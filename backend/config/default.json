@@ -4,7 +4,8 @@
     "port": 8082
   },
   "cors": {
-    "credentials": true,
-    "origin": "http://localhost:8080"
+    "origin": "*",
+    "methods": "GET, PUT, POST, DELETE",
+    "credentials": true
   }
 }

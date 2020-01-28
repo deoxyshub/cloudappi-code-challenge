@@ -1,0 +1,81 @@
+{
+  "header.menu.home": "Inicio",
+  "header.menu.about": "Acerca de Gian",
+  
+  "location.country.peru": "Perú",
+  "location.country.unitedstates": "Estados Unidos",
+  "location.flat.spanish": "Español",
+  "location.flat.english": "Inglés",
+
+  "list.user.title": "Lista de Usuarios",
+  "list.user.helpertext": "Seleccione un registro si desea realizar las acciones Eliminar o Editar",
+  
+  "action.filter": "Filtrar",
+  "action.clearfilter": "Eliminar filtro",
+  "action.cancel": "Cancelar",
+  "action.addnew": "Agregar",
+  "action.delete": "Eliminar",
+  "action.edit": "Editar",
+  "action.confirm": "Confirmar",
+  "action.submit": "Enviar",
+
+  "modal.deleteconfirmation.title": "Confirmación de Eliminar",
+  "modal.deleteconfirmation.message": "¿Estás seguro de que deseas eliminar a este usuario? | ¿Estás seguro de que deseas eliminar a estos usuarios?",
+  
+  "info.user.firstname": "Nombre",
+  "info.user.lastname": "Apellido",
+  "info.user.email": "Correo",
+  "info.user.birthdate": "Fecha de nacimiento",
+  "info.user.address": "Dirección",
+  "info.user.placeholder.firstname": "Ingrese el nombre del usuario",
+  "info.user.placeholder.lastname": "Ingrese el apellido del usuario",
+  "info.user.placeholder.email": "Ingrese el correo del usuario",
+
+  "info.address.street": "Calle",
+  "info.address.city": "Ciudad",
+  "info.address.country": "País",
+  "info.address.postalcode": "Código postal",
+  "info.address.placeholder.street": "Ingrese la calle de la dirección del usuario",
+  "info.address.placeholder.city": "Ingrese la ciudad de dirección del usuario",
+  "info.address.placeholder.country": "Seleccione el país de dirección del usuario",
+  "info.address.placeholder.postalcode": "Ingrese el código postal de la dirección del usuario",
+
+  "info.country.spain": "España",
+  "info.country.unitedkingdom": "Reino Unido",
+  "info.country.germany": "Alemania",
+  "info.country.unitedstates": "Estados Unidos",
+  "info.country.peru": "Perú",
+
+  "breadcrumb.home": "Inicio",
+  "breadcrumb.user": "Usuario",
+
+  "datepicker.month.january": "Enero",
+  "datepicker.month.february": "Febrero",
+  "datepicker.month.march": "Marzo",
+  "datepicker.month.april": "Abril",
+  "datepicker.month.may": "Mayo",
+  "datepicker.month.june": "Junio",
+  "datepicker.month.july": "Julio",
+  "datepicker.month.august": "Agosto",
+  "datepicker.month.september": "Septiembre",
+  "datepicker.month.october": "Octubre",
+  "datepicker.month.november": "Noviembre",
+  "datepicker.month.december": "Diciembre",
+
+  "datepicker.weekday.sunday": "Dom",
+  "datepicker.weekday.monday": "Lun",
+  "datepicker.weekday.tuesday": "Mar",
+  "datepicker.weekday.wednesday": "Mie",
+  "datepicker.weekday.thursday": "Jue",
+  "datepicker.weekday.friday": "Vie",
+  "datepicker.weekday.saturday": "Sab",
+
+  "form.validation.ismandatory": "Es requerido",
+
+  "about.as.developer": "Desarrollador de software empírico con más de 14 años de experiencia trabajando en el área de desarrollo de software, tanto para empresas locales como transnacionales. Conocimientos demostrados en lenguajes como C#, JavaScript, HTML y CSS, y tecnologías como .NET y Nodejs. Capacidad demostrada para liderar el desarrollo completo de las aplicaciones, guiar a otros y encontrar soluciones a problemas complejos.",
+  "about.as.gian": "Cuando no estoy trabajando, es probable que esté viendo películas, jugando videojuegos o haciendo deporte extremo como parapente o ciclismo de montaña. También, me encanta pasar tiempo con mis hijos y compartir momentos divertidos. Generalmente vamos a la playa, jugamos o andamos en bicicleta. Esta última actividad la hago solo con mis dos hijos mayores, Joan de 8 años y Danny de 4 años. Mi hijo menor, Gian, apenas tiene un año y medio. Ahora no puede andar en bicicleta ... Pero está ansioso por crecer y unirse a nosotros en la diversión. Ya camina solo!!",
+
+  "publish.owner.description": "Un Geek en el Perú",
+  "publish.date.shortname": "2020-01-28",
+  "publish.date.longname": "28 de enero del 2020"
+}

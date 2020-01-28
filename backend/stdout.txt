@@ -1,0 +1,18 @@
+
+> cloudappi-code-challenge@1.0.0 prestart /d/WorkSpace/Challenge/cloudappi/backend
+> npm install
+
+audited 421 packages in 1.686s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+> cloudappi-code-challenge@1.0.0 start /d/WorkSpace/Challenge/cloudappi/backend
+> node index.js
+
+[DEVELOPMENT]
+Server running at http://localhost:8082/
+Swagger-ui is available on http://localhost:8082/docs

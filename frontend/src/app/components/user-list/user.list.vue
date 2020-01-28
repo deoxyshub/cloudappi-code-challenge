@@ -1,46 +1,97 @@
 <template>
   <div class="user-list">
     <cv-data-table
-      title="List of Users"
-      helper-text="Select a record if you want to perform the Delete or Edit actions"
-      batch-cancel-label="Cancel"
+      :title="$t('list.user.title')"
+      :helper-text="$t('list.user.helpertext')"
+      :batch-cancel-label="$t('action.cancel')"
+      :searchLabel="$t('action.filter')"
+      :searchPlaceholder="$t('action.filter')"
+      :searchClearLabel="$t('action.clearfilter')"
       @search="onFilter"
       @sort="onSort"
       @row-select-change="actionRowSelectChange"
-      :columns="columns"
-      :data="data"
+      :columns="[
+        {
+          label: $t('info.user.firstname'),
+          sortable: true
+        },
+        {
+          label: $t('info.user.lastname'),
+          sortable: true
+        },
+        {
+          label: $t('info.user.email'),
+          sortable: false
+        },
+        {
+          label: $t('info.user.birthdate'),
+          sortable: true
+        },
+        {
+          label: $t('info.user.address'),
+          sortable: false
+        }
+      ]"
       v-model="rowSelects"
       ref="table"
     >
+      <!-- :data="filteredData" -->
       <template slot="actions">
-        <cv-button @click="actionNew">Add new</cv-button>
+        <cv-button @click="actionNew">{{ $t("action.addnew") }}</cv-button>
       </template>
       <template slot="batch-actions">
         <cv-button @click="confirmDeletion">
-          Delete
+          {{ $t("action.delete") }}
         </cv-button>
         <cv-button @click="actionEdit">
-          Edit
+          {{ $t("action.edit") }}
         </cv-button>
+      </template>
+      <template slot="data">
+        <cv-data-table-row
+          v-for="(row, rowIndex) in filteredData"
+          :key="`${rowIndex}`"
+          :value="`${rowIndex}`"
+        >
+          <cv-data-table-cell
+            v-for="(cell, cellIndex) in row"
+            :key="`${cellIndex}`"
+            :value="
+              [
+                $t('info.user.firstname'),
+                $t('info.user.lastname'),
+                $t('info.user.email'),
+                $t('info.user.birthdate'),
+                $t('info.user.address')
+              ][cellIndex]
+            "
+            v-html="cell"
+          ></cv-data-table-cell>
+        </cv-data-table-row>
       </template>
     </cv-data-table>
 
     <cv-modal
       kind="danger"
       size="xs"
-      :visible="showModal"
-      @modal-hidden="modalClosed"
+      ref="modal"
+      @modal-hidden="actionHidden"
       @primary-click="actionDelete"
     >
-      <template slot="title">Delete Confirmation</template>
+      <template slot="title">
+        {{ $t("modal.deleteconfirmation.title") }}
+      </template>
       <template slot="content">
         <p>
-          Are you sure you want to delete
-          {{ rowSelects.length > 1 ? "these users" : "this user" }}?.
+          {{ $tc("modal.deleteconfirmation.message", rowSelects.length) }}
         </p>
       </template>
-      <template slot="secondary-button">Cancel</template>
-      <template slot="primary-button">Confirm</template>
+      <template slot="secondary-button">
+        {{ $t("action.cancel") }}
+      </template>
+      <template slot="primary-button">
+        {{ $t("action.confirm") }}
+      </template>
     </cv-modal>
   </div>
 </template>

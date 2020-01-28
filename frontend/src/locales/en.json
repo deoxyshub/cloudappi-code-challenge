@@ -1,0 +1,81 @@
+{
+  "header.menu.home": "Home",
+  "header.menu.about": "About Gian",
+
+  "location.country.peru": "Peru",
+  "location.country.unitedstates": "United States",
+  "location.flat.spanish": "Spanish",
+  "location.flat.english": "English",
+
+  "list.user.title": "List of Users",
+  "list.user.helpertext": "Select a record if you want to perform the Delete or Edit actions",
+
+  "action.filter": "Filter",
+  "action.clearfilter": "Clear filter",
+  "action.cancel": "Cancel",
+  "action.addnew": "Add new",
+  "action.delete": "Delete",
+  "action.edit": "Edit",
+  "action.confirm": "Confirm",
+  "action.submit": "Submit",
+
+  "modal.deleteconfirmation.title": "Delete Confirmation",
+  "modal.deleteconfirmation.message": "Are you sure you want to delete this user? | Are you sure you want to delete these users?",
+
+  "info.user.firstname": "First name",
+  "info.user.lastname": "Last name",
+  "info.user.email": "Email",
+  "info.user.birthdate": "Birth date",
+  "info.user.address": "Address",
+  "info.user.placeholder.firstname": "Enter user's first name",
+  "info.user.placeholder.lastname": "Enter user's last name",
+  "info.user.placeholder.email": "Enter user's email",
+
+  "info.address.street": "Street",
+  "info.address.city": "City",
+  "info.address.country": "Country",
+  "info.address.postalcode": "Postal code",
+  "info.address.placeholder.street": "Enter user's address street",
+  "info.address.placeholder.city": "Enter user's address city",
+  "info.address.placeholder.country": "Choose user's address country",
+  "info.address.placeholder.postalcode": "Enter user's address postal code",
+
+  "info.country.spain": "Spain",
+  "info.country.unitedkingdom": "United Kingdom",
+  "info.country.germany": "Germany",
+  "info.country.unitedstates": "United States",
+  "info.country.peru": "Peru",
+
+  "breadcrumb.home": "Home",
+  "breadcrumb.user": "User",
+
+  "datepicker.month.january": "January",
+  "datepicker.month.february": "February",
+  "datepicker.month.march": "March",
+  "datepicker.month.april": "April",
+  "datepicker.month.may": "May",
+  "datepicker.month.june": "June",
+  "datepicker.month.july": "July",
+  "datepicker.month.august": "August",
+  "datepicker.month.september": "September",
+  "datepicker.month.october": "October",
+  "datepicker.month.november": "November",
+  "datepicker.month.december": "December",
+
+  "datepicker.weekday.sunday": "Sun",
+  "datepicker.weekday.monday": "Mon",
+  "datepicker.weekday.tuesday": "Tue",
+  "datepicker.weekday.wednesday": "Wed",
+  "datepicker.weekday.thursday": "Thu",
+  "datepicker.weekday.friday": "Fri",
+  "datepicker.weekday.saturday": "Sat",
+
+  "form.validation.ismandatory": "Is mandatory",
+
+  "about.as.developer": "Empiric software developer with 14+ years of well-rounded experience working in software development from local small business to large multinational companies. Proven skills in languages such as C#, JavaScript, HTML and CSS, and technologies such as .NET and Nodejs. Proven ability to lead the whole application development, mentor others and find solutions to complex problems.",
+  "about.as.gian": "When I am not working, I am likely watching movies, playing video games or doing an extreme sport like paragliding or mountain biking. Also I love spend time with my children and to share fun times. We usually go to the beach, play or ride a bike. This last activity I do only with my two eldest sons Joan 8-year and Danny 4-year. My youngest son Gian is barely one and a half years old. He can't ride a bike now... But he is eager to grow and join us in the fun. He already walks alone!!",
+
+  "publish.owner.description": "A Geek in Peru",
+  "publish.date.shortname": "2020-01-28",
+  "publish.date.longname": "January 28th, 2020"
+}

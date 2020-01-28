@@ -17,16 +17,21 @@ fieldset > legend {
   color: #747779;
 }
 
-.hack-cv-select .bx--select-input__wrapper {
-  position: relative;
+.bx--combo-box .bx--text-input::-webkit-input-placeholder,
+.bx--combo-box .bx--text-input::-moz-placeholder,
+.bx--combo-box .bx--text-input::-ms-input-placeholder,
+.bx--combo-box .bx--text-input:-ms-input-placeholder,
+.bx--combo-box .bx--text-input::placeholder {
+  color: #a8a8af;
 }
 
-.hack-cv-select .bx--select-input__wrapper::after {
-  content: "Choose user" "s country";
-  position: absolute;
-  left: 15px;
-  right: 40px;
-  top: 10px;
-  bottom: 0;
-  color: darkgrey;
+.bx--date-picker__calendar {
+  display: none;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .cv-form.bx--form {
+    width: auto;
+  }
 }

@@ -14,9 +14,11 @@ frontend/.env.local
 frontend/.env.*.local
 
 # Log files
+backend/.txt
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
 frontend/yarn-error.log*
+frontend/.txt
 
 # Editor directories and files
 frontend/.vscode
