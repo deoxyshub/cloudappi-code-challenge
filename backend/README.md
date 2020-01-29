@@ -30,4 +30,6 @@ cd backend
 npm install
 ```
 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/jhmorales
 [product-screenshot]: assets/screenshot.png
