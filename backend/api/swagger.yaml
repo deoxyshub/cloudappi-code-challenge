@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "Users API"
   version: "1.0.0"
-  title: "Cloudappi Code Challenge"
+  title: "CloudAppi ::: Code Challenge"
 schemes:
 - "http"
 - "https"
