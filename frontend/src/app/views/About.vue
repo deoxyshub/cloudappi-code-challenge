@@ -1,13 +1,9 @@
 <template>
   <div class="about">
     <section>
-      <h2>About Gian</h2>
-      <p>
-        {{ $t("about.as.developer") }}
-      </p>
-      <p>
-        {{ $t("about.as.gian") }}
-      </p>
+      <h2>{{ $t("about.title") }}</h2>
+      <p>{{ $t("about.as.developer") }}</p>
+      <p>{{ $t("about.as.gian") }}</p>
     </section>
   </div>
 </template>

@@ -4,8 +4,13 @@ import { Address } from "../../models/Address";
 import { UserApi } from "../../api/api";
 
 @Component
-export default class UserComponent extends Vue {
-  editMode: boolean = false;
+export default class UserEditComponent extends Vue {
+  @Prop({ default: "new" })
+  mode: string;
+
+  @Prop({ default: -1 })
+  userId: number;
+
   throwValidation: boolean = false;
 
   user: User = { address: {} };
@@ -16,16 +21,19 @@ export default class UserComponent extends Vue {
   }
 
   created() {
-    this.editMode = !!this.$route.params.userId;
-
     this.loadCountries();
   }
 
   async mounted(): Promise<void> {
     this.paintDatePicker();
 
-    this.editMode &&
-      (this.user = await UserApi.getUser(parseInt(this.$route.params.userId)));
+    if (this.mode == "edit") {
+      this.user = await UserApi.getUser(this.userId);
+      this.$emit(
+        "update:fullname",
+        `${this.user.firstname} ${this.user.lastname}`
+      );
+    }
   }
 
   countries = [];
@@ -41,7 +49,7 @@ export default class UserComponent extends Vue {
     )
       return;
 
-    if (this.editMode) await UserApi.updateUser(this.user);
+    if (this.mode == "edit") await UserApi.updateUser(this.user);
     else await UserApi.createUser(this.user);
 
     this.$router.push({ name: "home" });

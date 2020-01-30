@@ -2,9 +2,9 @@
 
 <br />
 <h3 align="center">CloudAppi ::: Code Challenge</h3>
-<p align="center"><a href="http://973ac878.ngrok.io/dogs">Ver demo</a></p>
+<p align="center"><a href="http://003f468a.ngrok.io">Ver demo</a></p>
 
-[![Users interface][product-screenshot]](https://3c878876.ngrok.io)
+[![Users interface][product-screenshot]](https://003f468a.ngrok.io)
 
 ### Construido con
 
@@ -13,6 +13,7 @@
 - [i18n](https://www.i18next.com/)
 - [Jest](https://jestjs.io/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Workbox](https://developers.google.com/web/tools/workbox/)
 
 ## Empezando
 

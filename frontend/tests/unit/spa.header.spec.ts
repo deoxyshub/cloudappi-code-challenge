@@ -1,5 +1,6 @@
 import { shallowMount, Wrapper } from "@vue/test-utils";
 import LocalizationComponent from "@/app/components/localization/localization";
+import About from "@/app/views/About.vue";
 import options from "../mount-options";
 
 describe("localization.vue", () => {
@@ -31,5 +32,15 @@ describe("localization.vue", () => {
     expect(
       wrapper.find('a[selected] > img[title="English"]').exists()
     ).toBeTruthy();
+  });
+});
+
+describe("about.vue", () => {
+  
+  options.router.push("/about");
+
+  it("La «vista de acerca de» es cargado.", () => {
+    let wrapper = shallowMount(About, options);
+    expect(wrapper.isVueInstance()).toBeTruthy();
   });
 });

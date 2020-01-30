@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <UserListComponent />
+    <user-list />
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import UserListComponent from "../components/user-list/user.list.vue";
 export default {
   name: "home",
   components: {
-    UserListComponent
+    ["user-list"]: UserListComponent
   }
 };
 </script>

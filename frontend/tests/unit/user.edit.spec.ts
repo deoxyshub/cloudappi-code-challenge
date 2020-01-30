@@ -1,5 +1,5 @@
 import { shallowMount, mount, Wrapper } from "@vue/test-utils";
-import UserComponent from "@/app/components/user-edit/user.edit";
+import User from "@/app/views/User.vue";
 import options from "../mount-options";
 import mockAxios from "jest-mock-axios";
 import flushPromises from "flush-promises";
@@ -7,32 +7,28 @@ import flushPromises from "flush-promises";
 jest.mock("axios");
 
 describe("user.edit.vue", () => {
-  let wrapper: Wrapper<UserComponent>;
+  let wrapper: Wrapper<any>;
   let serviceAPI: string = process.env.VUE_APP_ROOT_API;
+  let user = {
+    firstname: "Jhonny",
+    address: {
+      country: "PE",
+      city: "Lima",
+      street: "Av. A. Bertello 781",
+      postalcode: "15123"
+    },
+    id: 1,
+    birthDate: "1986-07-23",
+    email: "jhmorales0786@gmail.com",
+    lastname: "Morales"
+  };
 
   options.router.push("/user/1");
 
   beforeEach(async () => {
-    wrapper = mount(UserComponent, options);
+    wrapper = mount(User, options);
 
-    mockAxios.mockResponseFor(
-      { url: `${serviceAPI}/users/1` },
-      {
-        data: {
-          firstname: "Jhonny",
-          address: {
-            country: "PE",
-            city: "Lima",
-            street: "Av. A. Bertello 781",
-            postalcode: "15123"
-          },
-          id: 1,
-          birthDate: "1986-07-23",
-          email: "jhmorales0786@gmail.com",
-          lastname: "Morales"
-        }
-      }
-    );
+    mockAxios.mockResponseFor({ url: `${serviceAPI}/users/1` }, { data: user });
 
     await wrapper.vm.$nextTick();
 
@@ -40,7 +36,6 @@ describe("user.edit.vue", () => {
   });
 
   it("Los datos del usuario se muestran cuando la vista carga en «modo edition».", () => {
-    let user = wrapper.vm.user;
     let inputs = wrapper.findAll(".bx--form-item input").wrappers;
 
     let elementValue = (input: Wrapper<Vue>) => {
@@ -54,15 +49,11 @@ describe("user.edit.vue", () => {
     expect(elementValue(inputs[3])).toEqual(user.birthDate);
     expect(elementValue(inputs[4])).toEqual(user.address.street);
     expect(elementValue(inputs[5])).toEqual(user.address.city);
-    expect(elementValue(inputs[6])).toEqual(
-      wrapper.vm.countries.find(
-        country => country.value === user.address.country
-      ).name
-    );
+    expect(elementValue(inputs[6])).toEqual("Perú"); // user.address.country
     expect(elementValue(inputs[7])).toEqual(user.address.postalcode);
   });
 
-  it("La acción 'Enviar' graba la información del usuario y redirecciona a la «vista de inicio».", async() => {
+  it("La acción 'Enviar' graba la información del usuario y redirecciona a la «vista de inicio».", async () => {
     let submit = wrapper.find(".bx--btn--primary");
     submit.trigger("click");
 
@@ -75,5 +66,6 @@ describe("user.edit.vue", () => {
 
   afterEach(() => {
     mockAxios.reset();
+    1;
   });
 });

@@ -1,4 +1,4 @@
-import { http } from "@/http-common";
+import { http } from "@/http";
 import { User } from "@/app/models/models";
 
 export abstract class UserApi {

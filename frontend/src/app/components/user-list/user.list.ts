@@ -111,36 +111,4 @@ export default class UserListComponent extends Vue {
         .join(", ")
     ]);
   }
-
-  /* istanbul ignore next */
-  private addColumnData(): void {
-
-    // let columns = wrapper.findAll(".bx--data-table th").wrappers;
-    // expect(columns[1].text()).toEqual(options.i18n.t("info.user.firstname"));
-    // expect(columns[2].text()).toEqual(options.i18n.t("info.user.lastname"));
-    // expect(columns[3].text()).toEqual(options.i18n.t("info.user.email"));
-    // expect(columns[4].text()).toEqual(options.i18n.t("info.user.birthdate"));
-    // expect(columns[5].text()).toEqual(options.i18n.t("info.user.address"));
-
-    let months: Array<any> = [
-      this.$i18n.t("datepicker.month.january"),
-      this.$i18n.t("datepicker.month.february"),
-      this.$i18n.t("datepicker.month.march"),
-      this.$i18n.t("datepicker.month.april"),
-      this.$i18n.t("datepicker.month.may"),
-      this.$i18n.t("datepicker.month.june"),
-      this.$i18n.t("datepicker.month.july"),
-      this.$i18n.t("datepicker.month.august"),
-      this.$i18n.t("datepicker.month.september"),
-      this.$i18n.t("datepicker.month.october"),
-      this.$i18n.t("datepicker.month.november"),
-      this.$i18n.t("datepicker.month.december")
-    ];
-
-    document
-      .querySelectorAll(".flatpickr-monthDropdown-months > option")
-      .forEach((month, index) => {
-        month.textContent = months[index];
-      });
-  }
 }
